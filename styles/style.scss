@@ -1,0 +1,24 @@
+$textColor: red;
+$background: #ffffff;
+
+@import './header';
+@import './footer';
+@import './main';
+@import './orderSummary';
+@import './variables';
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+  width: $width100Percent;
+}
+
+.container {
+  background-color: $background;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: $width100Percent;
+  min-width: 375px;
+}
