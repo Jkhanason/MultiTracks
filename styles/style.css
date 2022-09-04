@@ -10,6 +10,7 @@ header {
 header h2 {
   font-weight: 900;
   padding-left: 0.5rem;
+  font-size: 2.2rem;
 }
 header span {
   font-weight: 100;
@@ -28,11 +29,17 @@ header nav ul {
 }
 header nav ul li {
   padding-right: 12px;
+  display: flex;
+  align-items: center;
+  align-items: center;
 }
 header nav ul li a {
   text-decoration: none;
   color: #b7b6b6;
-  font-size: 14px;
+  font-size: 1.6rem;
+}
+header nav ul li a:hover {
+  color: #85b6e4;
 }
 header nav ul li .covid {
   color: #85b6e4;
@@ -69,9 +76,10 @@ header nav div button {
   border: none;
   margin-left: -25px;
 }
-header nav div img {
-  -o-object-fit: cover;
-     object-fit: cover;
+header nav div .fa-regular, header nav div .fa-solid {
+  color: rgba(183, 182, 182, 0.7019607843);
+  padding-right: 0.4rem;
+  font-size: 1.3rem;
 }
 
 footer {
@@ -88,23 +96,118 @@ footer {
 
 main {
   grid-column: 1/3;
-  display: flex;
+  padding: 2rem;
 }
-main .one {
-  align-self: flex-end;
-  color: red;
+main h2 {
+  font-size: 2.2rem;
+}
+main .albums, main .saved {
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.6rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid lightgrey;
+}
+main .albums div, main .saved div {
+  min-height: 15vh;
+}
+main .albums .left, main .saved .left {
+  display: flex;
+  align-items: center;
+  width: 30rem;
+}
+main .albums .left img, main .saved .left img {
+  border-radius: 5px;
+  width: 10rem;
+}
+main .albums .left .title, main .saved .left .title {
+  font-weight: bold;
+  padding-top: 2.5rem;
+}
+main .albums .left .genre, main .saved .left .genre {
+  color: #b7b6b6;
+}
+main .albums .left .title, main .albums .left .genre, main .saved .left .title, main .saved .left .genre {
+  padding-left: 2rem;
+}
+main .albums .middle, main .saved .middle {
+  color: #b7b6b6;
+  display: flex;
+  align-items: center;
+  width: 25rem;
+  align-self: center;
+}
+main .albums .middle img, main .saved .middle img {
+  width: 2.5rem;
+}
+main .albums .middle p, main .saved .middle p {
+  padding-left: 0.5rem;
+}
+main .albums .right .price, main .saved .right .price {
+  text-align: end;
+  font-weight: bold;
+}
+main .albums .right .saveForLater, main .saved .right .saveForLater {
+  color: #b7b6b6;
+  text-decoration: none;
+}
+main .albums .right .saveForLater:hover, main .saved .right .saveForLater:hover {
+  color: #85b6e4;
+}
+main .continue {
+  color: #85b6e4;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+main .saveForLater {
+  margin-top: 5rem;
+}
+main .saveForLater .saved {
+  padding-bottom: 0;
+}
+main .saveForLater .left img {
+  width: 8rem;
+}
+main .saveForLater .savedRight {
+  display: flex;
+  align-items: center;
+}
+main .saveForLater .removeBtn, main .saveForLater .addToCartBtn {
+  color: #b7b6b6;
+  background-color: transparent;
+  font-size: 1.4rem;
+}
+main .saveForLater .removeBtn:hover, main .saveForLater .addToCartBtn:hover {
+  cursor: pointer;
+  color: #85b6e4;
+}
+main .saveForLater .removeBtn {
+  border: none;
+  padding-right: 1.5rem;
+}
+main .saveForLater .addToCartBtn {
+  padding: 0.4rem 1.6rem;
+  border-radius: 10rem;
+  border: 1px solid #b7b6b6;
+}
+main .saveForLater .addToCartBtn:hover {
+  border: 1px solid #85b6e4;
 }
 
 .orderSummary {
   background-color: #cecdcd;
 }
 
-body {
+body, html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: lato;
   width: 100%;
+  font-size: 62.5%;
 }
 
 .container {

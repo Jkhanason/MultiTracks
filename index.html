@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="styles/style.css"/>
+  <script src="https://kit.fontawesome.com/ec552e18e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
@@ -17,29 +18,132 @@
           <li><a href="#">Products ▾</a></li>
           <li><a href="#">Songs ▾</a></li>
           <li><a href="#">Sounds ▾</a></li>
-          <li><a href="#">Pricing ▾</a></li>
+          <li><a href="#">Pricing</a></li>
           <li><a href="#">More ▾</a></li>
           <li><a class="covid" href="#">COVID-19</a></li>
         </ul>
         <div>
           <ul class="settingsList">
-            <li><img src="images/user.png" alt="user icon" width="20%"><a href="#">Account</a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#">Support</a></li>
+            <li><i class="fa-regular fa-user"></i><a href="#">Account</a></li>
+            <li><i class="fa-solid fa-cart-shopping"></i></i><a href="#">Cart</a></li>
+            <li><i class="fa-solid fa-headset"></i><a href="#">Support</a></li>
           </ul>
           <input type="search" placeholder="search" results="0">
           <button type="submit">
             <img src="images/magnifier.png" alt="magnifify glass" width="75%">
-            </button>
-      </div>
+          </button>
+        </div>
       </nav>
-
     </header>
 
-    <main >Main
+    <main>
+      <h2>My Cart</h2>
 
-      <p>test</p>
-      <p class="one">test</p>
+      <div class="albums">
+        <div class="left">
+          <img src="images/albums.png" alt="album cover">
+          <div>
+            <p class="title">Graves Into Gardens</p>
+            <p class="genre">Elevation Worship</p>
+          </div>
+        </div>
+        <div class="middle">
+          <img src="images/logo.png" alt="MultTracks Logo">
+          <p>MultiTrack WAV</p>
+        </div>
+        <div class="right">
+          <p class="price">39 Credits</p>
+          <p class="saveForLater"><a class="saveForLater" href='#'>Remove</a> | <a class="saveForLater" href='#'>Save for later</a></p>
+        </div>
+      </div>
+
+      <div class="albums">
+        <div class="left">
+          <img src="images/bethelMusic.png" alt="album cover">
+          <div>
+            <p class="title">Godness of God</p>
+            <p class="genre">Bethel Music</p>
+          </div>
+        </div>
+        <div class="middle">
+          <img src="images/logo.png" alt="MultTracks Logo">
+          <p>Chart</p>
+        </div>
+        <div class="right">
+          <p class="price">2 Credits</p>
+          <p class="saveForLater"><a class="saveForLater" href='#'>Remove</a> | <a class="saveForLater" href='#'>Save for later</a></p>
+        </div>
+      </div>
+
+      <p class="continue"> <a class="continue" href='#'>< Continue shopping</a></Continue></p>
+
+
+
+
+
+
+
+
+      <div class="saveForLater">
+        <h2>Saved for later</h2>
+
+        <div class="saved">
+          <div class="left">
+            <img src="images/kariJobe.png" alt="album cover">
+            <div class="titleDiv">
+              <p class="title">Forever (Live Version)</p>
+              <p class="genre">Kari Jobe</p>
+            </div>
+          </div>
+          <div class="middle">
+            <img src="images/logo.png" alt="MultTracks Logo">
+            <p>MultiTrack WAV</p>
+          </div>
+          <div class="right savedRight">
+            <button class="removeBtn">Remove</button>
+            <button class="addToCartBtn">Add To Cart</button>
+          </div>
+        </div>
+
+        <div class="saved">
+          <div class="left">
+            <img src="images/hillside.png" alt="album cover">
+            <div>
+              <p class="title">In God We Trust</p>
+              <p class="genre">Hillsong Worship</p>
+            </div>
+          </div>
+          <div class="middle">
+            <img src="images/logo.png" alt="MultTracks Logo">
+            <p>MultiTrack WAV</p>
+          </div>
+          <div class="right savedRight">
+            <button class="removeBtn">Remove</button>
+            <button class="addToCartBtn">Add To Cart</button>
+          </div>
+        </div>
+
+        <div class="saved">
+          <div class="left">
+            <img src="images/philWickham.png" alt="album cover">
+            <div>
+              <p class="title">This is Amazing Grace</p>
+              <p class="genre">Phil Wickham</p>
+            </div>
+          </div>
+          <div class="middle">
+            <img src="images/logo.png" alt="MultTracks Logo">
+            <p>MultiTrack WAV</p>
+          </div>
+          <div class="right savedRight">
+            <button class="removeBtn">Remove</button>
+            <button class="addToCartBtn">Add To Cart</button>
+          </div>
+        </div>
+
+      </div>
+
+
     </main>
     <div class="orderSummary">Order Sumary</div>
     <footer>

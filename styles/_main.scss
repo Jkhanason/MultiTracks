@@ -1,11 +1,123 @@
-
+@mixin flexRow {
+  display: flex;
+  align-items: center;
+}
 
 main {
   grid-column: 1 / 3;
-  display: flex;
+  padding: 2rem;
 
-  .one {
-    align-self: flex-end;
-    color:red
+  h2 {
+    font-size: 2.2rem;
+  }
+  .albums, .saved {
+    @include flexRow();
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.6rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid lightgrey;
+    // background-color: red;
+    div {
+      min-height: 15vh; ///this
+    }
+    .left {
+      @include flexRow();
+      // background-color: yellow;
+      width: 30rem;
+      img {
+        border-radius: 5px;
+        width: 10rem;
+      }
+      .titleDiv {
+      //  background-color: white;
+      }
+      .title {
+        font-weight: bold;
+        padding-top: 2.5rem;
+      }
+      .genre {
+        color: $greyFont;
+      }
+      .title, .genre {
+        padding-left: 2rem;
+      }
+    }
+    .middle {
+      color: $greyFont;
+      @include flexRow();
+      width: 25rem;
+      align-self: center;
+      // background-color: orange;
+      img {
+        width: 2.5rem;
+      }
+      p {
+        padding-left: .5rem;
+      }
+    }
+    .right {
+      // background-color: blue;
+      // align-self: flex-end;
+      // // display: flex;
+      // flex-direction: column;
+
+      .price {
+        text-align: end;
+        font-weight: bold;
+      }
+      .saveForLater {
+        color: $greyFont;
+        text-decoration: none;
+        &:hover{
+          color: $covidBlue;
+        }
+      }
+    }
+  }
+
+  .continue {
+    color: $covidBlue;
+    font-size: 1.6rem;
+    text-decoration: none;
+  }
+
+  .saveForLater {
+    margin-top: 5rem;
+    .saved {
+      padding-bottom: 0;
+    }
+    .left {
+      //not needed yet
+      img {
+        width: 8rem;
+      }
+    }
+    .savedRight {
+      @include flexRow();
+      // background-color: green;
+    }
+    .removeBtn, .addToCartBtn {
+      color: $greyFont;
+      background-color: transparent;
+      font-size: 1.4rem;
+      &:hover {
+        cursor: pointer;
+        color: $covidBlue;
+      }
+    }
+    .removeBtn {
+      border: none;
+      padding-right: 1.5rem;
+    }
+    .addToCartBtn {
+      padding: .4rem 1.6rem;
+      border-radius: 10rem;
+      border: 1px solid $greyFont;
+      &:hover {
+        border: 1px solid $covidBlue;;
+      }
+    }
   }
 }

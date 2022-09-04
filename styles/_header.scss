@@ -1,5 +1,5 @@
 $paddingZero16px: 0 16px;
-$greyFont: #b7b6b6;
+
 
 
 @mixin flexRow {
@@ -22,6 +22,7 @@ header {
   h2 {
     font-weight: 900;
     padding-left: .5rem;
+    font-size: 2.2rem;
   }
   span {
     font-weight: 100;
@@ -38,14 +39,18 @@ header {
 
       li {
         padding-right: 12px;
-
+        @include flexRow();
+        align-items: center;
         a {
           text-decoration: none;
           color: $greyFont;
-          font-size: 14px;
+          font-size: 1.6rem;
+          &:hover {
+            color: $covidBlue;
+          }
         }
         .covid {
-          color: #85b6e4;
+          color: $covidBlue;
         }
       }
     }
@@ -55,9 +60,6 @@ header {
       justify-content: flex-end;
       .settingsList {
         //not needed yet
-      }
-      img {
-        
       }
       input {
         border-radius: 3px;
@@ -76,9 +78,14 @@ header {
         background: transparent;
         border: none;
         margin-left: -25px;
+        img {
+          //not needed yet
+        }
       }
-      img {
-        object-fit: cover;
+      .fa-regular, .fa-solid {
+        color: #b7b6b6b3;
+        padding-right: .4rem;
+        font-size: 1.3rem;
       }
     }
   }
