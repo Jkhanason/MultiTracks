@@ -85,12 +85,70 @@ header nav div .fa-regular, header nav div .fa-solid {
 footer {
   grid-column: 1/-1;
 }
-
-.lightBlack {
+footer .lightBlack {
   background-color: #282828;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  color: #b7b6b6;
+  font-size: 1.6rem;
+  padding: 0 8rem;
 }
-
-.darkBlack {
+footer .lightBlack h3 {
+  color: #FAFAFA;
+  font-weight: normal;
+  font-size: 2rem;
+}
+footer .lightBlack .products, footer .lightBlack .resources, footer .lightBlack .store, footer .lightBlack .account {
+  list-style: none;
+}
+footer .lightBlack li {
+  padding-bottom: 1rem;
+}
+footer .lightBlack a {
+  color: #919191;
+  text-decoration: none;
+}
+footer .lightBlack .subscribe {
+  background-color: yellow;
+}
+footer .lightBlack .subscribe h3 {
+  margin-bottom: 1rem;
+}
+footer .lightBlack form {
+  display: flex;
+}
+footer .lightBlack form input {
+  background-color: #171717;
+  font-family: lato;
+  border: 0.1rem solid #919191;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding: 1rem 10rem 1rem 1rem;
+}
+footer .lightBlack form button {
+  border: none;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: #43b1e6;
+  color: white;
+  font-weight: bold;
+  padding: 0 2rem;
+}
+footer .lightBlack .socialIcons {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  background-color: green;
+  height: 10vh;
+}
+footer .lightBlack .socialIcons img {
+  width: 3rem;
+  padding-right: 1rem;
+}
+footer .lightBlack .socialIcons button {
+  justify-self: flex-end;
+}
+footer .darkBlack {
   background-color: #171717;
 }
 
@@ -101,60 +159,62 @@ main {
 main h2 {
   font-size: 2.2rem;
 }
-main .albums, main .saved {
+main .cart, main .saved {
   display: flex;
   align-items: center;
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem;
   font-size: 1.6rem;
-  padding-bottom: 6rem;
   border-bottom: 1px solid lightgrey;
 }
-main .albums div, main .saved div {
+main .cart div, main .saved div {
   min-height: 15vh;
 }
-main .albums .left, main .saved .left {
+main .cart .left, main .saved .left {
   display: flex;
   align-items: center;
   width: 30rem;
 }
-main .albums .left img, main .saved .left img {
+main .cart .left img, main .saved .left img {
   border-radius: 5px;
   width: 10rem;
 }
-main .albums .left .title, main .saved .left .title {
+main .cart .left .title, main .saved .left .title {
   font-weight: bold;
-  padding-top: 2.5rem;
+  padding-top: 2rem;
 }
-main .albums .left .genre, main .saved .left .genre {
+main .cart .left .genre, main .saved .left .genre {
   color: #b7b6b6;
 }
-main .albums .left .title, main .albums .left .genre, main .saved .left .title, main .saved .left .genre {
+main .cart .left .title, main .cart .left .genre, main .saved .left .title, main .saved .left .genre {
   padding-left: 2rem;
 }
-main .albums .middle, main .saved .middle {
+main .cart .middle, main .saved .middle {
   color: #b7b6b6;
   display: flex;
   align-items: center;
-  width: 25rem;
-  align-self: center;
+  align-self: baseline;
+  min-width: 15rem;
 }
-main .albums .middle img, main .saved .middle img {
+main .cart .middle img, main .saved .middle img {
   width: 2.5rem;
 }
-main .albums .middle p, main .saved .middle p {
+main .cart .middle p, main .saved .middle p {
   padding-left: 0.5rem;
 }
-main .albums .right .price, main .saved .right .price {
+main .cart .right, main .saved .right {
+  align-self: baseline;
+}
+main .cart .right .price, main .saved .right .price {
   text-align: end;
   font-weight: bold;
 }
-main .albums .right .saveForLater, main .saved .right .saveForLater {
+main .cart .right .saveForLater, main .saved .right .saveForLater {
   color: #b7b6b6;
   text-decoration: none;
 }
-main .albums .right .saveForLater:hover, main .saved .right .saveForLater:hover {
+main .cart .right .saveForLater:hover, main .saved .right .saveForLater:hover {
   color: #85b6e4;
 }
 main .continue {
@@ -170,6 +230,9 @@ main .saveForLater .saved {
 }
 main .saveForLater .left img {
   width: 8rem;
+}
+main .saveForLater .left .savedTitle {
+  padding-top: 1rem;
 }
 main .saveForLater .savedRight {
   display: flex;

@@ -1,12 +1,83 @@
+@import './variables';
 
+@mixin noBullets () {
+  list-style: none;
+}
+@mixin flexRow {
+  display: flex;
+  align-items: center;
+}
 
 footer {
   grid-column: 1 / -1;
-}
+
 .lightBlack {
   background-color: #282828;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  color: $greyFont;
+  font-size: 1.6rem;
+  padding: 0 8rem;
+  h3 {
+    color: #FAFAFA;
+    font-weight: normal;
+    font-size: 2rem;
+
+  }
+  .products, .resources, .store, .account {
+    @include noBullets();
+  }
+  li {
+    padding-bottom: 1rem;
+  }
+  a {
+    color: $footerLinkColor;
+    text-decoration: none;
+  }
+  .subscribe {
+    background-color: yellow;
+  }
+  .subscribe h3 {
+    margin-bottom: 1rem;
+  }
+  form {
+    display: flex;
+    input {
+      background-color: #171717;
+      font-family: lato;
+      border: .1rem solid $footerLinkColor;
+      border-top-left-radius: .5rem;
+      border-bottom-left-radius: .5rem;
+      padding: 1rem 10rem 1rem 1rem;
+    }
+    button {
+      border: none;
+      border-top-right-radius: .5rem;
+      border-bottom-right-radius: .5rem;
+      background-color: #43b1e6;
+      color: white;
+      font-weight: bold;
+      padding: 0 2rem;
+    }
+  }
+  .socialIcons {
+    @include flexRow();
+    margin-top: 3rem;
+    background-color: green;
+    height: 10vh;
+
+    img {
+      width: 3rem;
+      padding-right: 1rem;
+    }
+    button {
+      justify-self:flex-end;
+    }
+  }
 }
 
-.darkBlack {
-  background-color: #171717;
+
+  .darkBlack {
+    background-color: #171717;
+  }
 }

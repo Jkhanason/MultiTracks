@@ -10,13 +10,12 @@ main {
   h2 {
     font-size: 2.2rem;
   }
-  .albums, .saved {
+  .cart, .saved {
     @include flexRow();
     align-items: flex-start;
     justify-content: space-between;
     padding: 1rem;
     font-size: 1.6rem;
-    padding-bottom: 6rem;
     border-bottom: 1px solid lightgrey;
     // background-color: red;
     div {
@@ -31,11 +30,11 @@ main {
         width: 10rem;
       }
       .titleDiv {
-      //  background-color: white;
+      //  background-color: brown;
       }
       .title {
         font-weight: bold;
-        padding-top: 2.5rem;
+        padding-top: 2rem;
       }
       .genre {
         color: $greyFont;
@@ -47,8 +46,8 @@ main {
     .middle {
       color: $greyFont;
       @include flexRow();
-      width: 25rem;
-      align-self: center;
+      align-self: baseline;
+      min-width: 15rem;
       // background-color: orange;
       img {
         width: 2.5rem;
@@ -59,10 +58,7 @@ main {
     }
     .right {
       // background-color: blue;
-      // align-self: flex-end;
-      // // display: flex;
-      // flex-direction: column;
-
+      align-self: baseline;
       .price {
         text-align: end;
         font-weight: bold;
@@ -85,6 +81,7 @@ main {
 
   .saveForLater {
     margin-top: 5rem;
+
     .saved {
       padding-bottom: 0;
     }
@@ -92,6 +89,9 @@ main {
       //not needed yet
       img {
         width: 8rem;
+      }
+      .savedTitle{
+        padding-top: 1rem;
       }
     }
     .savedRight {
