@@ -10,6 +10,7 @@
 
 footer {
   grid-column: 1 / -1;
+  width: 100%;
 
 .lightBlack {
   background-color: #282828;
@@ -35,6 +36,7 @@ footer {
     text-decoration: none;
   }
   .subscribe {
+    grid-column: 5 / 7;
     background-color: yellow;
   }
   .subscribe h3 {
@@ -42,6 +44,7 @@ footer {
   }
   form {
     display: flex;
+    background-color: red;
     input {
       background-color: #171717;
       font-family: lato;
@@ -54,7 +57,7 @@ footer {
       border: none;
       border-top-right-radius: .5rem;
       border-bottom-right-radius: .5rem;
-      background-color: #43b1e6;
+      background-color: $covidBlue;
       color: white;
       font-weight: bold;
       padding: 0 2rem;
@@ -64,14 +67,16 @@ footer {
     @include flexRow();
     margin-top: 3rem;
     background-color: green;
+    width: 100%;
     height: 10vh;
 
     img {
       width: 3rem;
       padding-right: 1rem;
     }
-    button {
-      justify-self:flex-end;
+
+    .followBtn {
+      margin-left: auto;
     }
   }
 }

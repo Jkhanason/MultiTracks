@@ -1,4 +1,80 @@
 
 .orderSummary {
-  background-color: #cecdcd;
+  grid-column: 3 / -1;
+  background-color: #FAFAFA;
+  font-size: 1.6rem;
+  padding: 3rem 0;
+  // width: 20%;
+  p {
+    margin: 1rem 0;
+  }
+  h2 {
+    font-size: 3.3rem;
+    margin: 2rem 0 7rem 6rem;
+  }
+  .credits {
+    display: grid;
+    grid-template-columns: auto, auto;
+    margin: 0 6rem 2.5rem 6rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid lightgrey;
+
+    .boldText {
+      font-weight: bold;
+      grid-column: 1 / 2;
+
+    }
+    .promo {
+      padding-top: 1.5rem;
+
+    }
+    .right {
+      text-align: end;
+      grid-column: 2 / 3;
+      color: $footerLinkColor;
+
+    }
+    .black {
+      color: black;
+    }
+    .cardNum {
+      color: $footerLinkColor;
+      font-weight: 400;
+    }
+    a {
+      color: $covidBlue;
+    }
+  }
+  .placeOrder {
+    margin: 2rem 6rem;
+    color: $greyFont;
+    display: flex;
+    flex-direction: column;
+    p:first-of-type {
+      align-self: flex-start;
+    }
+    p:last-of-type {
+      text-align: center;
+      font-size: 1.4rem;
+      padding: 0 4rem;
+    }
+    button {
+      align-self: center;
+      margin: 1rem 0;
+      width: 100%;
+      padding: 1.5rem;
+      border-radius: 50px;
+      border: none;
+      color: white;
+      background-color: $covidBlue;
+      letter-spacing: .07rem;
+      font-weight: bold;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    a {
+      color: $greyFont;
+    }
+  }
 }

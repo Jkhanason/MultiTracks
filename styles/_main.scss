@@ -5,10 +5,13 @@
 
 main {
   grid-column: 1 / 3;
-  padding: 2rem;
+  padding: 2rem 0 6rem 2rem;
+  margin-right: 2rem;
+  // width: 80%;
+  // background-color: tan;
 
   h2 {
-    font-size: 2.2rem;
+    font-size: 3.3rem;
   }
   .cart, .saved {
     @include flexRow();
@@ -16,8 +19,9 @@ main {
     justify-content: space-between;
     padding: 1rem;
     font-size: 1.6rem;
+    padding-bottom: 3rem;
     border-bottom: 1px solid lightgrey;
-    // background-color: red;
+    // background-color: tan;
     div {
       min-height: 15vh; ///this
     }
@@ -81,7 +85,9 @@ main {
 
   .saveForLater {
     margin-top: 5rem;
-
+    h2 {
+      font-size: 2.3rem;
+    }
     .saved {
       padding-bottom: 0;
     }

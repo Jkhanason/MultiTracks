@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/ec552e18e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -136,7 +139,39 @@
       </div>
     </main>
 
-    <div class="orderSummary">Order Sumary</div>
+    <div class="orderSummary">
+      <h2>Order Summary</h2>
+      <div class='credits'>
+        <p class="boldText">Credits in your account</p>
+        <p class='right'>234</p>
+        <p class="boldText">Credits required</p>
+        <p class="right">41</p>
+        <p class="boldText promo">Promo Code</p>
+        <p class="right promo black">&#8964</p>
+      </div>
+      <div class='credits'>
+        <p class="boldText">Subtotal</p>
+        <p class='right'>41</p>
+        <p class="boldText">Tax</p>
+        <p class='right'>-</p>
+      </div>
+      <div class='credits'>
+        <p class="boldText">Total</p>
+        <p class='right black'>41</p>
+      </div>
+      <div class='credits'>
+        <p class="boldText">Payment Method</p>
+        <p class="boldText">American Express <span class="cardNum">- 1234</span></p>
+        <p class='right'><a href="#">Change</a></p>
+      </div>
+      <div class="placeOrder">
+        <p>All sales are final.</p>
+        <button>PLACE ORDER</button>
+        <p>By placing an order, you agree to the <a href="#">Terms of Use</a> and <a href="#">Privary Policy</a></p>
+      </div>
+
+
+    </div>
 
     <footer>
       <div class="lightBlack">
@@ -206,8 +241,8 @@
             <a href="#"><img src="images/Twitter.png" alt="twitter icon"></a>
             <a href="#"><img src="images/Twitter.png" alt="instagram icon"></a>
             <a href="#"><img src="images/YouTube.png" alt="youtube icon"></a>
-            <button>Like</button>
-            <button>Follow</button>
+            <button class="likeBtn">Like</button>
+            <button class="followBtn">Follow</button>
           </div>
 
 

@@ -1,7 +1,5 @@
 $paddingZero16px: 0 16px;
 
-
-
 @mixin flexRow {
   display: flex;
   align-items: center;
@@ -15,7 +13,10 @@ header {
   flex-wrap: nowrap;
   padding: .5rem 1rem;
   border-bottom: 1px solid lightgrey;
-  min-width: 500px; //play with this later
+  font-family:'Lato';
+  // background-color: blue;
+  width: 100%;
+  // min-width: 500px; //play with this later
   img {
     //not needed yet
   }
@@ -30,6 +31,7 @@ header {
   nav {
     @include flexRow();
     justify-content: space-between;
+    // background-color: red;
     width: 100%;
 
     ul {
@@ -68,7 +70,7 @@ header {
         min-width: 70px;
         padding: 4px 0;
         text-indent: 5px;
-        font-family: lato;
+        font-family: 'Lato';
         &::placeholder {
           color: #b7b6b6;
           text-indent: 5px;
