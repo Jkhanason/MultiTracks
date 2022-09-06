@@ -8,7 +8,7 @@
 
 .saveContainer {
   grid-column: 1 / 3;
-  padding: 0rem 0 6rem 2rem;
+  padding: 0rem 2rem 6rem 2rem;
   margin-right: 2rem;
   color: $footerLinkColor;
   // background-color: tan;
@@ -36,7 +36,7 @@
       width: 30rem;
       img {
         border-radius: 5px;
-        width: 10rem;
+        width: 7rem;
       }
       .title {
         font-weight: bold;
@@ -80,7 +80,7 @@
         padding-right: 1.5rem;
       }
       .addToCartBtn {
-        padding: .4rem 1.6rem;
+        padding: .7rem 2rem;
         border-radius: 10rem;
         border: 1px solid $greyFont;
         &:hover {
@@ -137,7 +137,6 @@
       }
       .middle {
         grid-column: 1 / 2;
-        align-items: flex-start;
         min-height: fit-content;
         // background-color: rgb(132, 85, 23);
         p {

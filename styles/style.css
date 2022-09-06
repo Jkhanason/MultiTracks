@@ -58,6 +58,21 @@ header nav div {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
+header nav div .settingsList {
+  position: relative;
+}
+header nav div .settingsList .cartTotal {
+  background-color: #43b1e6;
+  color: white;
+  font-size: 1rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 13.4rem;
+}
 header nav div input {
   border-radius: 3px;
   border: 1px solid #b7b6b6;
@@ -231,13 +246,14 @@ footer .lightBlack .socialMediaDiv .btnDiv i {
 }
 footer .darkBlack {
   background-color: #171717;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 1.4rem;
   padding: 0 10rem;
 }
-footer .darkBlack p {
-  text-align: center;
+footer .darkBlack .middle {
+  margin-right: 28rem;
 }
 footer .darkBlack p:last-of-type {
   text-align: end;
@@ -247,7 +263,7 @@ footer .darkBlack .copyRight {
   text-align: left;
 }
 footer .darkBlack a {
-  margin: 0 2rem;
+  margin: 0 1rem;
   color: #919191;
   text-decoration: none;
 }
@@ -318,7 +334,7 @@ footer .darkBlack i {
 
 main {
   grid-column: 1/3;
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem;
   margin-right: 2rem;
   color: #919191;
 }
@@ -385,6 +401,7 @@ main .cart .right .price {
   color: black;
   text-align: end;
   font-weight: bold;
+  margin: 0 0 5rem 0;
 }
 main .cart .right .saveForLater {
   color: #919191;
@@ -400,6 +417,9 @@ main .continue {
   color: #43b1e6;
   font-size: 1.6rem;
   text-decoration: none;
+}
+main .stickyTotal {
+  display: none;
 }
 @media only screen and (max-width: 390px) {
   main h2 {
@@ -430,8 +450,8 @@ main .continue {
     cursor: pointer;
   }
   main .cart .left .titleDiv {
-    margin-left: -6rem;
-    padding-top: 2rem;
+    margin-left: -4rem;
+    padding-top: 3rem;
     min-width: 25vh;
     align-self: baseline;
   }
@@ -440,7 +460,6 @@ main .continue {
   }
   main .cart .middle {
     grid-column: 1/2;
-    align-items: flex-start;
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;
@@ -475,6 +494,43 @@ main .continue {
     cursor: pointer;
     color: #43b1e6;
     border: 1px solid #43b1e6;
+  }
+  main .stickyTotal {
+    display: block;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 0 -1rem 10rem rgba(0, 0, 0, 0.491);
+    width: 100%;
+    position: fixed;
+    bottom: 0.01rem;
+    right: 0.05rem;
+  }
+  main .stickyTotal p {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: black;
+    line-height: 2rem;
+    padding-left: 1rem;
+  }
+  main .stickyTotal button {
+    background-color: #43b1e6;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1.5rem 3rem;
+    padding-top: -1rem;
+    letter-spacing: 0.2rem;
+    margin-right: 1.5rem;
+  }
+  main .stickyTotal button:hover {
+    cursor: pointer;
   }
 }
 
@@ -574,7 +630,7 @@ main .continue {
 
 .saveContainer {
   grid-column: 1/3;
-  padding: 0rem 0 6rem 2rem;
+  padding: 0rem 2rem 6rem 2rem;
   margin-right: 2rem;
   color: #919191;
 }
@@ -603,7 +659,7 @@ main .continue {
 }
 .saveContainer .saved .left img {
   border-radius: 5px;
-  width: 10rem;
+  width: 7rem;
 }
 .saveContainer .saved .left .title {
   font-weight: bold;
@@ -647,7 +703,7 @@ main .continue {
   padding-right: 1.5rem;
 }
 .saveContainer .saved .savedRight .addToCartBtn {
-  padding: 0.4rem 1.6rem;
+  padding: 0.7rem 2rem;
   border-radius: 10rem;
   border: 1px solid #b7b6b6;
 }
@@ -697,7 +753,6 @@ main .continue {
   }
   .saveContainer .saved .middle {
     grid-column: 1/2;
-    align-items: flex-start;
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;

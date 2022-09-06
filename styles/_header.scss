@@ -17,12 +17,8 @@ header {
   font-family:'Lato';
   // background-color: blue;
   width: 100%;
-  // min-width: 500px; //play with this later
   .mobileNav {
     display: none;
-  }
-  img {
-    //not needed yet
   }
   h2 {
     font-weight: 900;
@@ -37,7 +33,6 @@ header {
     justify-content: space-between;
     // background-color: red;
     width: 85%;
-
     ul {
       @include flexRow();
       flex-wrap: wrap;
@@ -70,7 +65,19 @@ header {
       flex-wrap: wrap;
       justify-content: flex-end;
       .settingsList {
-        //not needed yet
+        position: relative;
+        .cartTotal {
+          background-color: $covidBlue;
+          color: white;
+          font-size: 1rem;
+          padding: .1rem .5rem;
+          border-radius: 100%;
+          position: relative;
+          z-index: 1;
+          position: absolute;
+          bottom: 0;
+          left: 13.4rem;
+        }
       }
       input {
         border-radius: 3px;

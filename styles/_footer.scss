@@ -112,22 +112,30 @@ footer {
 
   .darkBlack {
     background-color: #171717;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
     font-size: 1.4rem;
     padding: 0 10rem;
-    p {
-      text-align: center;
+    .middle {
+      // margin: 0 4rem;
+      // text-align: center;
+      margin-right: 28rem;
     }
     p:last-of-type{
       text-align: end;
       font-size: 1.7rem;
+      // background-color: #456db0;
+      // margin: 0;
     }
     .copyRight {
       text-align: left;
+      // background-color: darkgoldenrod;
     }
     a {
-      margin: 0 2rem;
+      margin: 0 1rem;
       color: $footerLinkColor;
       text-decoration: none;
     }
