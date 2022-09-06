@@ -51,11 +51,11 @@
       <div class="cart">
         <div class="left">
           <img src="images/elevation.png" alt="album cover">
-          <div>
+          <div class="titleDiv">
             <p class="title">Graves Into Gardens</p>
             <p class="genre">Elevation Worship</p>
-            <!-- <p>X</p> -->
           </div>
+          <i class="fa-solid fa-x mobileX"></i>
         </div>
         <div class="middle">
           <img src="images/logo.png" alt="MultTracks Logo">
@@ -71,13 +71,14 @@
       <div class="cart">
         <div class="left">
           <img src="images/bethelMusic.png" alt="album cover">
-          <div>
+          <div class="titleDiv">
             <p class="title">Godness of God</p>
             <p class="genre">Bethel Music</p>
           </div>
+          <i class="fa-solid fa-x mobileX"></i>
         </div>
         <div class="middle">
-          <img src="images/logo.png" alt="MultTracks Logo">
+          <i class="fa-regular fa-file-audio"></i>
           <p>Chart</p>
         </div>
         <div class="right">
@@ -88,65 +89,69 @@
       </div>
 
       <p class="continue"> <a class="continue" href='#'> &#x3c Continue shopping</a></Continue></p>
+    </main>
 
-      <div class="saveForLater">
-        <h2>Saved for later</h2>
-        <div class="saved">
-          <div class="left">
-            <img src="images/kariJobe.png" alt="album cover">
-            <div class="titleDiv">
-              <p class="title savedTitle">Forever (Live Version)</p>
-              <p class="genre">Kari Jobe</p>
-            </div>
+    <div class="saveContainer">
+      <h2>Saved for later</h2>
+      <div class="saved">
+        <div class="left">
+          <img src="images/kariJobe.png" alt="album cover">
+          <div class="titleDiv">
+            <p class="title savedTitle">Forever (Live Version)</p>
+            <p class="genre">Kari Jobe</p>
           </div>
-          <div class="middle">
-            <img src="images/logo.png" alt="MultTracks Logo">
-            <p>MultiTrack WAV</p>
-          </div>
-          <div class="savedRight">
-            <button class="removeBtn">Remove</button>
-            <button class="addToCartBtn">Add To Cart</button>
-          </div>
+          <i class="fa-solid fa-x mobileX"></i>
         </div>
-
-        <div class="saved">
-          <div class="left">
-            <img src="images/hillside.png" alt="album cover">
-            <div>
-              <p class="title savedTitle">In God We Trust</p>
-              <p class="genre">Hillsong Worship</p>
-            </div>
-          </div>
-          <div class="middle">
-            <img src="images/logo.png" alt="MultTracks Logo">
-            <p>MultiTrack WAV</p>
-          </div>
-          <div class="savedRight">
-            <button class="removeBtn">Remove</button>
-            <button class="addToCartBtn">Add To Cart</button>
-          </div>
+        <div class="middle">
+          <img src="images/logo.png" alt="MultTracks Logo">
+          <p>MultiTrack WAV</p>
         </div>
-
-        <div class="saved">
-          <div class="left">
-            <img src="images/philWickham.png" alt="album cover">
-            <div>
-              <p class="title savedTitle">This is Amazing Grace</p>
-              <p class="genre">Phil Wickham</p>
-            </div>
-          </div>
-          <div class="middle">
-            <img src="images/logo.png" alt="MultTracks Logo">
-            <p>MultiTrack WAV</p>
-          </div>
-          <div class="savedRight">
-            <button class="removeBtn">Remove</button>
-            <button class="addToCartBtn">Add To Cart</button>
-          </div>
+        <div class="savedRight">
+          <button class="removeBtn">Remove</button>
+          <button class="addToCartBtn">Add To Cart</button>
         </div>
       </div>
 
-    </main>
+      <div class="saved">
+        <div class="left">
+          <img src="images/hillside.png" alt="album cover">
+          <div class="titleDiv">
+            <p class="title savedTitle">In God We Trust</p>
+            <p class="genre">Hillsong Worship</p>
+          </div>
+          <i class="fa-solid fa-x mobileX"></i>
+        </div>
+        <div class="middle">
+          <img src="images/logo.png" alt="MultTracks Logo">
+          <p>MultiTrack WAV</p>
+        </div>
+        <div class="savedRight">
+          <button class="removeBtn">Remove</button>
+          <button class="addToCartBtn">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="saved">
+        <div class="left">
+          <img src="images/philWickham.png" alt="album cover">
+          <div class="titleDiv">
+            <p class="title savedTitle">This is Amazing Grace</p>
+            <p class="genre">Phil Wickham</p>
+          </div>
+          <i class="fa-solid fa-x mobileX"></i>
+        </div>
+        <div class="middle">
+          <img src="images/logo.png" alt="MultTracks Logo">
+          <p>MultiTrack WAV</p>
+        </div>
+        <div class="savedRight">
+          <button class="removeBtn">Remove</button>
+          <button class="addToCartBtn">Add To Cart</button>
+        </div>
+      </div>
+    </div>
+
+
     <div class="orderSummary">
       <h2>Order Summary</h2>
 
@@ -167,7 +172,7 @@
       </div>
 
       <div class='credits'>
-        <p class="boldText">Total</p>
+        <p class="boldText">TOTAL</p>
         <p class='right black'>41</p>
       </div>
 
@@ -187,6 +192,16 @@
 
     <footer>
       <div class="lightBlack">
+
+        <ul class="subscribeMobile">
+          <h3>Subscribe to our Newsletter</h3>
+          <form name="subscribe">
+            <input type="email" placeholder="Email Address">
+            <button>Subscribe</button>
+          </form>
+          <h3>Have a Problem?</h3>
+          <a href="#">View FAQs or Contact our Support Team  ></a>
+        </ul>
 
         <ul class="products">
           <h3>Products</h3>
@@ -249,11 +264,13 @@
           <h3>Have a Problem?</h3>
           <a href="#">View FAQs or Contact our Support Team  ></a>
 
-          <div class="socialIcons">
-            <a href="#"><img src="images/Facebook.png" alt="facebook icon"></a>
-            <a href="#"><img src="images/Twitter.png" alt="twitter icon"></a>
-            <a href="#"><img src="images/Twitter.png" alt="instagram icon"></a>
-            <a href="#"><img src="images/YouTube.png" alt="youtube icon"></a>
+          <div class="socialMediaDiv">
+            <div class="iconsDiv">
+              <a href="#"><img src="images/Facebook.png" alt="facebook icon"></a>
+              <a href="#"><img src="images/Twitter.png" alt="twitter icon"></a>
+              <a href="#"><img src="images/Twitter.png" alt="instagram icon"></a>
+              <a href="#"><img src="images/YouTube.png" alt="youtube icon"></a>
+            </div>
             <div class="btnDiv">
               <button class="likeBtn"><i class="fa-solid fa-thumbs-up"></i>Like 29K</button>
               <button class="followBtn"><i class="fa-brands fa-twitter"></i>Follow</button>

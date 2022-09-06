@@ -1,7 +1,8 @@
 @import './variables';
 
 .orderSummary {
-  grid-column: 3 / -1;
+  grid-column: 3;
+  grid-row: 2/ 4;
   background-color: #FAFAFA;
   font-size: 1.6rem;
   padding: 3rem 0;
@@ -83,14 +84,12 @@
   }
 
   @include breakpoint(mobile) {
-  
-
-
     h2 {
       margin-left: 1.5rem;
     }
     .credits, .placeOrder {
       margin: 0 2.5rem;
+      padding-bottom: 1rem;
     }
     .placeOrder {
       .fullSizeText {

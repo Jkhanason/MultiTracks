@@ -1,28 +1,30 @@
+@import './variables';
+
 @mixin flexRow {
   display: flex;
   align-items: center;
 }
 
 
-main {
+.saveContainer {
   grid-column: 1 / 3;
-  padding: 2rem 0 2rem 2rem;
+  padding: 0rem 0 6rem 2rem;
   margin-right: 2rem;
   color: $footerLinkColor;
   // background-color: tan;
-
   h2 {
-    font-size: 3.3rem;
+    font-size: 2.3rem;
     color: black;
+    margin-bottom: 1rem;
   }
-  .cart {
+  .saved {
     box-sizing: border-box;
     @include flexRow();
     align-items: flex-start;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 2rem;
     font-size: 1.6rem;
-    padding-bottom: 3rem;
+    // padding-bottom: 2rem;
     border-bottom: 1px solid lightgrey;
     // background-color: tan;
     div {
@@ -54,11 +56,6 @@ main {
       align-self: baseline;
       min-width: 15rem;
       // background-color: orange;
-      i {
-        font-size: 3.5rem;
-        padding-right: .5rem;
-        color: $greyFont;
-      }
       img {
         width: 3rem;
       }
@@ -66,39 +63,39 @@ main {
         padding-left: .5rem;
       }
     }
-    .right {
-      // background-color: blue;
-      align-self: baseline;
-      .price {
-        color: black;
-        text-align: end;
-        font-weight: bold;
-      }
-      .saveForLater {
+    .savedRight {
+      @include flexRow();
+      // background-color: green;
+      .removeBtn, .addToCartBtn {
         color: $footerLinkColor;
-        text-decoration: none;
-        &:hover{
+        background-color: transparent;
+        font-size: 1.4rem;
+        &:hover {
+          cursor: pointer;
           color: $covidBlue;
         }
       }
-      .cartMobileSaveBtn {
-        display: none;
+      .removeBtn {
+        border: none;
+        padding-right: 1.5rem;
+      }
+      .addToCartBtn {
+        padding: .4rem 1.6rem;
+        border-radius: 10rem;
+        border: 1px solid $greyFont;
+        &:hover {
+          border: 1px solid $covidBlue;;
+        }
       }
     }
   }
 
-  .continue {
-    color: $covidBlue;
-    font-size: 1.6rem;
-    text-decoration: none;
-  }
-
-
   @include breakpoint(mobile) {
+    padding-bottom: 3rem;
     h2 {
-      margin: .5rem 0;
+      margin: 4rem 0 2rem 0;
     }
-    .cart {
+    .saved {
       display: grid;
       grid-template-columns: (50%, 50%);
       font-size: 1.4;
@@ -106,30 +103,35 @@ main {
       width: 100%;
       padding: 0 0 1.5rem 1rem;
       // background-color: tan;
+      &:last-of-type {
+        border-bottom: none;
+
+      }
       .left {
         grid-column: 1 / 3;
+        min-width: 0;
         width: 100%;
-        // background-color: tan;
-        justify-content: space-between;
+        // background-color: bisque;
         img {
           width: 6rem;
         }
-        .mobileX {
-          display: block;
-          font-size: 2.5rem;
+        .titleDiv{
+          // background-color: purple;
+          width: 100%;
           align-self: baseline;
-          &:hover {
-            cursor: pointer;
+          p:first-of-type {
+            padding-top: 1rem;
           }
         }
-        .titleDiv {
-          margin-left: -6rem;
-          padding-top: 2rem;
-          min-width: 25vh;
+        .mobileX {
+          display: block;
+          // width: 100%;
+          font-size: 2.5rem;
           align-self: baseline;
-          // background-color: red;
-          p {
-            padding: 0;
+          // text-align: right;
+          // background-color: plum;
+          &:hover {
+            cursor: pointer;
           }
         }
       }
@@ -142,34 +144,17 @@ main {
           margin: 0;
         }
       }
-      .right {
-        // background-color: orange;
-        align-self: flex-start;
-        grid-column: 2 / 3;
-        min-height: 0;
-        .price {
-          margin-top: 0;
-        }
-        .saveForLater {
+      .savedRight {
+        align-items: flex-start;
+        margin-top: -.5rem;
+        min-height:fit-content;
+        padding-bottom: 3rem;
+        .removeBtn {
           display: none;
         }
-        .cartMobileSaveBtn {
-          display: block;
-          align-self: flex-end;
-          color: $footerLinkColor;
+        .addToCartBtn {
           font-size: 1.4rem;
-          background: transparent;
-          border-radius: 25px;
           padding: 1rem 3rem;
-          border: 1px solid $footerLinkColor;
-          font-weight: bold;
-          letter-spacing: .05rem;
-          &:hover {
-            cursor: pointer;
-            color: $covidBlue;
-            border: 1px solid $covidBlue;
-
-          }
         }
       }
     }

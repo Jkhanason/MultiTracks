@@ -2,6 +2,7 @@
 @import './footer';
 @import './main';
 @import './orderSummary';
+@import './saveContainer';
 @import './variables';
 
 
@@ -26,15 +27,18 @@ body, html {
     flex-direction: column;
     width: 390px;
     main {
-      order: 1
+      order: 2;
     }
     header {
-      order: 2;
+      order: 1;
     }
     .orderSummary {
       order: 3;
     }
     footer {
+      order: 5;
+    }
+    .saveContainer {
       order: 4;
     }
   }
