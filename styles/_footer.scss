@@ -116,7 +116,7 @@ footer {
       text-align: end;
       font-size: 1.7rem;
     }
-    p:first-of-type {
+    .copyRight {
       text-align: left;
     }
     a {
@@ -152,6 +152,20 @@ footer {
       }
       .account {
         grid-column: 2 / 3;
+      }
+    }
+
+    .darkBlack {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      padding: 0 5rem 2rem 5rem;
+      p, .copyRight {
+        text-align: center;
+      }
+      a {
+        margin: 0 1rem;
       }
     }
   }

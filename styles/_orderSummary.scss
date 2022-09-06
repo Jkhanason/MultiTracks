@@ -1,3 +1,4 @@
+@import './variables';
 
 .orderSummary {
   grid-column: 3 / -1;
@@ -53,10 +54,13 @@
     p:first-of-type {
       align-self: flex-start;
     }
-    p:last-of-type {
+    .fullSizeText, .mobileText  {
       text-align: center;
       font-size: 1.4rem;
       padding: 0 4rem;
+    }
+    .mobileText {
+      display: none;
     }
     button {
       align-self: center;
@@ -75,6 +79,26 @@
     }
     a {
       color: $greyFont;
+    }
+  }
+
+  @include breakpoint(mobile) {
+  
+
+
+    h2 {
+      margin-left: 1.5rem;
+    }
+    .credits, .placeOrder {
+      margin: 0 2.5rem;
+    }
+    .placeOrder {
+      .fullSizeText {
+        display: none;
+      }
+      .mobileText {
+        display: block;
+      }
     }
   }
 }

@@ -18,14 +18,24 @@ body, html {
   background-color: $background;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 99%;
+  width: 100%;
   margin: auto;
-  // padding: 5rem;
-  // background-color: red;
 
   @include breakpoint(mobile) {
     display: flex;
     flex-direction: column;
     width: 390px;
+    main {
+      order: 1
+    }
+    header {
+      order: 2;
+    }
+    .orderSummary {
+      order: 3;
+    }
+    footer {
+      order: 4;
+    }
   }
 }
