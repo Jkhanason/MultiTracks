@@ -14,9 +14,9 @@
 <body>
   <div class="container">
     <header >
-      <img src="images/logo.png" alt="MultTracks Logo">
+      <img class="fullSizeImg" src="images/logo.png" alt="MultTracks Logo">
       <h2>MultiTracks<span>.com</span></h2>
-      <nav>
+      <nav class="fullSizeNav">
         <ul>
           <li><a href="#">Products ▾</a></li>
           <li><a href="#">Songs ▾</a></li>
@@ -27,7 +27,7 @@
         </ul>
         <div>
           <ul class="settingsList">
-            <li><i class="fa-regular fa-user"></i><a href="#">Account</a></li>
+            <li><a href="#"> <i class="fa-regular fa-user"></i> Account</a></li>
             <li><i class="fa-solid fa-cart-shopping"></i></i><a href="#">Cart</a></li>
             <li><i class="fa-solid fa-headset"></i><a href="#">Support</a></li>
           </ul>
@@ -36,6 +36,12 @@
             <img src="images/magnifier.png" alt="magnifify glass" width="75%">
           </button>
         </div>
+      </nav>
+      <nav class="mobileNav">
+        <i class="fa-solid fa-ellipsis"></i>
+        <img src="images/logo.png" alt="MultTracks Logo">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-user"></i>
       </nav>
     </header>
 
@@ -57,6 +63,7 @@
         <div class="right">
           <p class="price">39 Credits</p>
           <p class="saveForLater"><a class="saveForLater" href='#'>Remove</a> | <a class="saveForLater" href='#'>Save for later</a></p>
+          <button class="cartMobileSaveBtn">Save For Later</button>
         </div>
       </div>
 
@@ -75,10 +82,11 @@
         <div class="right">
           <p class="price">2 Credits</p>
           <p class="saveForLater"><a class="saveForLater" href='#'>Remove</a> | <a class="saveForLater" href='#'>Save for later</a></p>
+          <button class="cartMobileSaveBtn">Save For Later</button>
         </div>
       </div>
 
-      <p class="continue"> <a class="continue" href='#'>< Continue shopping</a></Continue></p>
+      <p class="continue"> <a class="continue" href='#'> Continue shopping</a></Continue></p>
 
       <div class="saveForLater">
         <h2>Saved for later</h2>
@@ -135,12 +143,12 @@
             <button class="addToCartBtn">Add To Cart</button>
           </div>
         </div>
-
       </div>
-    </main>
 
+    </main>
     <div class="orderSummary">
       <h2>Order Summary</h2>
+
       <div class='credits'>
         <p class="boldText">Credits in your account</p>
         <p class='right'>234</p>
@@ -149,32 +157,35 @@
         <p class="boldText promo">Promo Code</p>
         <p class="right promo black">&#8964</p>
       </div>
+
       <div class='credits'>
         <p class="boldText">Subtotal</p>
         <p class='right'>41</p>
         <p class="boldText">Tax</p>
         <p class='right'>-</p>
       </div>
+
       <div class='credits'>
         <p class="boldText">Total</p>
         <p class='right black'>41</p>
       </div>
+
       <div class='credits'>
         <p class="boldText">Payment Method</p>
         <p class="boldText">American Express <span class="cardNum">- 1234</span></p>
         <p class='right'><a href="#">Change</a></p>
       </div>
+
       <div class="placeOrder">
         <p>All sales are final.</p>
         <button>PLACE ORDER</button>
-        <p>By placing an order, you agree to the <a href="#">Terms of Use</a> and <a href="#">Privary Policy</a></p>
+        <p>By placing an order, you agree to the <a href="#">Terms of Use</a> and <a href="#">Privary Policy.</a></p>
       </div>
-
-
     </div>
 
     <footer>
       <div class="lightBlack">
+
         <ul class="products">
           <h3>Products</h3>
           <li><a href="#">The Connected Stage</a></li>
@@ -234,25 +245,25 @@
             <button>Subscribe</button>
           </form>
           <h3>Have a Problem?</h3>
-          <a href="#">View FAQs or Contact our Support Team ></a>
+          <a href="#">View FAQs or Contact our Support Team  ></a>
 
           <div class="socialIcons">
             <a href="#"><img src="images/Facebook.png" alt="facebook icon"></a>
             <a href="#"><img src="images/Twitter.png" alt="twitter icon"></a>
             <a href="#"><img src="images/Twitter.png" alt="instagram icon"></a>
             <a href="#"><img src="images/YouTube.png" alt="youtube icon"></a>
-            <button class="likeBtn">Like</button>
-            <button class="followBtn">Follow</button>
+            <div class="btnDiv">
+              <button class="likeBtn"><i class="fa-solid fa-thumbs-up"></i>Like 29K</button>
+              <button class="followBtn"><i class="fa-brands fa-twitter"></i>Follow</button>
+            </div>
           </div>
-
-
         </ul>
-
-
       </div>
 
-      <div class="darkBlack">dark black
-
+      <div class="darkBlack">
+        <p>©2006-2021 by MultiTracks.com LLC. All Rights Reserved</p>
+        <p><a href="#">Terms</a>|<a href="#">Privacy Policy</a>|<a href="#">Contact</a></p>
+        <p><a href="#"><i class="fa-solid fa-globe"></i>English ▾</a></p>
       </div>
 
     </footer>

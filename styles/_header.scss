@@ -17,6 +17,9 @@ header {
   // background-color: blue;
   width: 100%;
   // min-width: 500px; //play with this later
+  .mobileNav {
+    display: none;
+  }
   img {
     //not needed yet
   }
@@ -32,7 +35,7 @@ header {
     @include flexRow();
     justify-content: space-between;
     // background-color: red;
-    width: 100%;
+    width: 85%;
 
     ul {
       @include flexRow();
@@ -43,13 +46,18 @@ header {
         padding-right: 12px;
         @include flexRow();
         align-items: center;
+        &:hover {
+          a {
+            color: $covidBlue;
+          }
+          i {
+            color: $covidBlue;
+          }
+        }
         a {
           text-decoration: none;
           color: $greyFont;
           font-size: 1.6rem;
-          &:hover {
-            color: $covidBlue;
-          }
         }
         .covid {
           color: $covidBlue;
@@ -88,6 +96,40 @@ header {
         color: #b7b6b6b3;
         padding-right: .4rem;
         font-size: 1.3rem;
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    width: contain;
+    padding-bottom: 1.5rem;
+    h2, .fullSizeImg {
+      display: none;
+    }
+    .fullSizeNav {
+      display: none;
+    }
+    .mobileNav {
+      padding: 0 1.5rem;
+      width: 100%;
+      @include flexRow();
+      img {
+        // margin: 0 auto;
+        position: relative;
+        left: 5rem;
+      }
+      i {
+        font-size: 1.5rem;
+        color: $greyFont;
+      }
+      i:nth-of-type(2) {
+        transform: rotateY(180deg);
+        position: relative;
+        right: -5rem;
+      }
+      i:last-of-type {
+        text-align: right;
+
       }
     }
   }

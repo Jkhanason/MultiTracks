@@ -1,10 +1,9 @@
-$background: #ffffff;
-
 @import './header';
 @import './footer';
 @import './main';
 @import './orderSummary';
 @import './variables';
+
 
 body, html {
   box-sizing: border-box;
@@ -19,9 +18,14 @@ body, html {
   background-color: $background;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 98%;
-  // margin: auto;
+  width: 99%;
+  margin: auto;
   // padding: 5rem;
   // background-color: red;
-  min-width: 375px;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+  }
 }

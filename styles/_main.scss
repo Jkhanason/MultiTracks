@@ -3,15 +3,17 @@
   align-items: center;
 }
 
+
 main {
   grid-column: 1 / 3;
   padding: 2rem 0 6rem 2rem;
   margin-right: 2rem;
-  // width: 80%;
+  color: $footerLinkColor;
   // background-color: tan;
 
   h2 {
     font-size: 3.3rem;
+    color: black;
   }
   .cart, .saved {
     @include flexRow();
@@ -33,22 +35,17 @@ main {
         border-radius: 5px;
         width: 10rem;
       }
-      .titleDiv {
-      //  background-color: brown;
-      }
       .title {
         font-weight: bold;
         padding-top: 2rem;
-      }
-      .genre {
-        color: $greyFont;
+        color: black;
+        margin-bottom: -1rem;
       }
       .title, .genre {
         padding-left: 2rem;
       }
     }
     .middle {
-      color: $greyFont;
       @include flexRow();
       align-self: baseline;
       min-width: 15rem;
@@ -64,15 +61,19 @@ main {
       // background-color: blue;
       align-self: baseline;
       .price {
+        color: black;
         text-align: end;
         font-weight: bold;
       }
       .saveForLater {
-        color: $greyFont;
+        color: $footerLinkColor;
         text-decoration: none;
         &:hover{
           color: $covidBlue;
         }
+      }
+      .cartMobileSaveBtn {
+        display: none;
       }
     }
   }
@@ -98,6 +99,7 @@ main {
       }
       .savedTitle{
         padding-top: 1rem;
+        margin-bottom: -1rem;
       }
     }
     .savedRight {
@@ -105,7 +107,7 @@ main {
       // background-color: green;
     }
     .removeBtn, .addToCartBtn {
-      color: $greyFont;
+      color: $footerLinkColor;
       background-color: transparent;
       font-size: 1.4rem;
       &:hover {
@@ -123,6 +125,82 @@ main {
       border: 1px solid $greyFont;
       &:hover {
         border: 1px solid $covidBlue;;
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    h2 {
+      margin: .5rem 0;
+    }
+    .cart, .saved {
+      display: grid;
+      grid-template-columns: (50%, 50%);
+      font-size: 1.4;
+      min-height: 0;
+      width: 100%;
+      padding-bottom: 1.5rem;
+      // background-color: tan;
+      .left {
+        grid-column: 1 / 3;
+        min-width: 0;
+        img {
+          width: 6rem;
+        }
+      }
+      .middle {
+        grid-column: 1 / 2;
+        align-items: flex-start;
+        min-height: fit-content;
+        // background-color: rgb(132, 85, 23);
+        p {
+          margin: 0;
+        }
+      }
+      .right {
+        // background-color: orange;
+        align-self: flex-start;
+        grid-column: 2 / 3;
+        min-height: 0;
+        .price {
+          margin-top: 0;
+        }
+        .saveForLater {
+          display: none;
+        }
+        .cartMobileSaveBtn {
+          display: block;
+          align-self: flex-end;
+          color: $footerLinkColor;
+          font-size: 1.4rem;
+          background: transparent;
+          border-radius: 25px;
+          padding: 1rem 3rem;
+          border: 1px solid $footerLinkColor;
+          font-weight: bold;
+          letter-spacing: .05rem;
+          &:hover {
+            cursor: pointer;
+            color: $covidBlue;
+            border: 1px solid $covidBlue;
+
+          }
+        }
+      }
+    }
+    .saveForLater {
+      .savedRight {
+        align-items: flex-start;
+        margin-top: -.5rem;
+        min-height:fit-content;
+        padding-bottom: 3rem;
+        .removeBtn {
+          display: none;
+        }
+        .addToCartBtn {
+          font-size: 1.4rem;
+          padding: 1rem 3rem;
+        }
       }
     }
   }

@@ -2,4 +2,12 @@ $width100Percent: 100%;
 $greyFont: #b7b6b6;
 $footerLinkColor: #919191;
 $covidBlue: #43b1e6;
+$background: #ffffff;
 
+@mixin breakpoint ($device) {
+  @if $device == mobile {
+    @media only screen and (max-width: 390px) {
+      @content
+    }
+  }
+}
