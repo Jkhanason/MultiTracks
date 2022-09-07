@@ -36,7 +36,6 @@ header nav ul li {
   padding-right: 12px;
   display: flex;
   align-items: center;
-  align-items: center;
 }
 header nav ul li:hover a {
   color: #43b1e6;
@@ -217,6 +216,7 @@ footer .lightBlack .socialMediaDiv {
 }
 footer .lightBlack .socialMediaDiv .iconsDiv {
   display: flex;
+  align-items: center;
 }
 footer .lightBlack .socialMediaDiv .iconsDiv img {
   width: 3rem;
@@ -224,6 +224,7 @@ footer .lightBlack .socialMediaDiv .iconsDiv img {
 }
 footer .lightBlack .socialMediaDiv .btnDiv {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   width: 100%;
 }
@@ -319,13 +320,16 @@ footer .darkBlack i {
   }
   footer .darkBlack {
     display: flex;
+    align-items: center;
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
     padding: 0 7rem 2rem 7rem;
   }
-  footer .darkBlack p, footer .darkBlack .copyRight {
+  footer .darkBlack p, footer .darkBlack .copyRight, footer .darkBlack .middle {
     text-align: center;
+  }
+  footer .darkBlack .middle {
+    margin: 0;
   }
   footer .darkBlack a {
     margin: 0 1rem;
@@ -499,8 +503,8 @@ main .stickyTotal {
     display: block;
     background-color: #ffffff;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem 0;
     box-shadow: 0 -1rem 10rem rgba(0, 0, 0, 0.491);
     width: 100%;
@@ -723,7 +727,7 @@ main .stickyTotal {
     font-size: 1.4;
     min-height: 0;
     width: 100%;
-    padding: 0 0 1.5rem 1rem;
+    padding: 1rem 0 1.5rem 1rem;
   }
   .saveContainer .saved:last-of-type {
     border-bottom: none;

@@ -1,10 +1,5 @@
 $paddingZero16px: 0 16px;
 
-@mixin flexRow {
-  display: flex;
-  align-items: center;
-}
-
 @import './variables';
 
 header {
@@ -15,8 +10,7 @@ header {
   padding: .5rem 1rem;
   border-bottom: 1px solid lightgrey;
   font-family:'Lato';
-  // background-color: blue;
-  width: 100%;
+  width: $width100Percent;
   .mobileNav {
     display: none;
   }
@@ -31,17 +25,14 @@ header {
   nav {
     @include flexRow();
     justify-content: space-between;
-    // background-color: red;
     width: 85%;
     ul {
       @include flexRow();
       flex-wrap: wrap;
-      list-style: none;
-
+      @include noBullets();
       li {
         padding-right: 12px;
         @include flexRow();
-        align-items: center;
         &:hover {
           a {
             color: $covidBlue;
@@ -96,9 +87,6 @@ header {
         background: transparent;
         border: none;
         margin-left: -25px;
-        img {
-          //not needed yet
-        }
       }
       .fa-regular, .fa-solid {
         color: #b7b6b6b3;
@@ -119,7 +107,7 @@ header {
     }
     .mobileNav {
       padding: 0 1.5rem;
-      width: 100%;
+      width: $width100Percent;
       @include flexRow();
       img {
         position: relative;
@@ -139,7 +127,6 @@ header {
       }
       i:last-of-type {
         text-align: right;
-
       }
     }
   }

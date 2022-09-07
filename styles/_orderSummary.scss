@@ -6,7 +6,6 @@
   background-color: #FAFAFA;
   font-size: 1.6rem;
   padding: 3rem 0;
-  // width: 20%;
   p {
     margin: 1rem 0;
   }
@@ -20,21 +19,17 @@
     margin: 0 6rem 2.5rem 6rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid lightgrey;
-
     .boldText {
       font-weight: bold;
       grid-column: 1 / 2;
-
     }
     .promo {
       padding-top: 1.5rem;
-
     }
     .right {
       text-align: end;
       grid-column: 2 / 3;
       color: $footerLinkColor;
-
     }
     .black {
       color: black;
@@ -66,7 +61,7 @@
     button {
       align-self: center;
       margin: 1rem 0;
-      width: 100%;
+      width: $width100Percent;
       padding: 1.5rem;
       border-radius: 50px;
       border: none;

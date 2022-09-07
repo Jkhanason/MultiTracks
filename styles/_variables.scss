@@ -4,6 +4,15 @@ $footerLinkColor: #919191;
 $covidBlue: #43b1e6;
 $background: #ffffff;
 
+@mixin flexRow {
+  display: flex;
+  align-items: center;
+}
+
+@mixin noBullets () {
+  list-style: none;
+}
+
 @mixin breakpoint ($device) {
   @if $device == mobile {
     @media only screen and (max-width: 390px) {

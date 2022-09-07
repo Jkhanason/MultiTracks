@@ -1,16 +1,8 @@
 @import './variables';
 
-@mixin noBullets () {
-  list-style: none;
-}
-@mixin flexRow {
-  display: flex;
-  align-items: center;
-}
-
 footer {
   grid-column: 1 / -1;
-  width: 100%;
+  width: $width100Percent;
   color: $footerLinkColor;
   button:hover {
     cursor: pointer;
@@ -79,16 +71,16 @@ footer {
     @include flexRow();
     margin-top: 3rem;
     .iconsDiv {
-      display: flex;
+      @include flexRow();
       img {
         width: 3rem;
         padding-right: 2rem;
       }
     }
     .btnDiv {
-      display: flex;
+      @include flexRow();
       justify-content: flex-end;
-      width: 100%;
+      width: $width100Percent;
       button {
         color: white;
         font-weight: bold;
@@ -112,27 +104,19 @@ footer {
 
   .darkBlack {
     background-color: #171717;
-    display: flex;
-    align-items: center;
+    @include flexRow();
     justify-content: space-between;
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
     font-size: 1.4rem;
     padding: 0 10rem;
     .middle {
-      // margin: 0 4rem;
-      // text-align: center;
       margin-right: 28rem;
     }
     p:last-of-type{
       text-align: end;
       font-size: 1.7rem;
-      // background-color: #456db0;
-      // margin: 0;
     }
     .copyRight {
       text-align: left;
-      // background-color: darkgoldenrod;
     }
     a {
       margin: 0 1rem;
@@ -193,13 +177,15 @@ footer {
     }
 
     .darkBlack {
-      display: flex;
+      @include flexRow();
       flex-direction: column-reverse;
       justify-content: center;
-      align-items: center;
       padding: 0 7rem 2rem 7rem;
-      p, .copyRight {
+      p, .copyRight, .middle {
         text-align: center;
+      }
+      .middle {
+        margin: 0;
       }
       a {
         margin: 0 1rem;

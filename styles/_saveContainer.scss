@@ -1,17 +1,10 @@
 @import './variables';
 
-@mixin flexRow {
-  display: flex;
-  align-items: center;
-}
-
-
 .saveContainer {
   grid-column: 1 / 3;
   padding: 0rem 2rem 6rem 2rem;
   margin-right: 2rem;
   color: $footerLinkColor;
-  // background-color: tan;
   h2 {
     font-size: 2.3rem;
     color: black;
@@ -24,15 +17,12 @@
     justify-content: space-between;
     padding: 1rem 1rem 2rem 2rem;
     font-size: 1.6rem;
-    // padding-bottom: 2rem;
     border-bottom: 1px solid lightgrey;
-    // background-color: tan;
     div {
-      min-height: 15vh; ///this
+      min-height: 15vh;
     }
     .left {
       @include flexRow();
-      // background-color: yellow;
       width: 30rem;
       img {
         border-radius: 5px;
@@ -55,7 +45,6 @@
       @include flexRow();
       align-self: baseline;
       min-width: 15rem;
-      // background-color: orange;
       img {
         width: 3rem;
       }
@@ -65,7 +54,6 @@
     }
     .savedRight {
       @include flexRow();
-      // background-color: green;
       .removeBtn, .addToCartBtn {
         color: $footerLinkColor;
         background-color: transparent;
@@ -100,24 +88,20 @@
       grid-template-columns: (50%, 50%);
       font-size: 1.4;
       min-height: 0;
-      width: 100%;
-      padding: 0 0 1.5rem 1rem;
-      // background-color: tan;
+      width: $width100Percent;
+      padding: 1rem 0 1.5rem 1rem;
       &:last-of-type {
         border-bottom: none;
-
       }
       .left {
         grid-column: 1 / 3;
         min-width: 0;
-        width: 100%;
-        // background-color: bisque;
+        width: $width100Percent;
         img {
           width: 6rem;
         }
         .titleDiv{
-          // background-color: purple;
-          width: 100%;
+          width: $width100Percent;
           align-self: baseline;
           p:first-of-type {
             padding-top: 1rem;
@@ -125,11 +109,8 @@
         }
         .mobileX {
           display: block;
-          // width: 100%;
           font-size: 2.5rem;
           align-self: baseline;
-          // text-align: right;
-          // background-color: plum;
           &:hover {
             cursor: pointer;
           }
@@ -138,7 +119,6 @@
       .middle {
         grid-column: 1 / 2;
         min-height: fit-content;
-        // background-color: rgb(132, 85, 23);
         p {
           margin: 0;
         }
